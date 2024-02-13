@@ -1,0 +1,36 @@
+Para poder exercutar o projeto é preciso ter uma conexão com o PHP.
+
+O projeto foi feito utilizando o LocalWP para conseguir abrir os arquivos em PHP, passos:
+
+1° - Instalar o LocalWP;
+2° - Será instalado o WordPress, basta remover o arquivo relacionado ao WordPress e adicionar o arquivo em zip;
+3° - É preciso criar um banco de dados também e ajustar os parametros de configuração de conexão do banco de dados
+banco de dados - conexao.php
+
+Seguem as tabelas criadas:
+
+CREATE TABLE formulario_contato (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    telefone VARCHAR(20),
+    assunto VARCHAR(255) NOT NULL,
+    mensagem TEXT NOT NULL,
+    data_envio TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE assinantes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome_assinante VARCHAR(255) NOT NULL,
+    email_assinante VARCHAR(255) NOT NULL UNIQUE
+);
+
+Fiz o teste no formulário e os dados estão sendo salvos nas tableas:
+Tabela Assinantes: https://prnt.sc/ggc5yDaWIvtx
+Tabela Formulário de contato: https://prnt.sc/zvBsgVFkcPNo
+
+Gravei um vídemos mostrando como foi feito:
+https://youtu.be/y6sfBK8sTYA
+
+Qualquer dúvida sobre o projeto me notifiquem.
